@@ -21,7 +21,7 @@ const TopBar = () => {
                 </ul>
             </div>
             <div className="topRight">
-                <img src={pic} alt="" srcset="" className="logo" />
+                <img src={pic} alt="" srcset="" className="topImg" />
                 <i className="topSearchIcon fas fa-search"></i>
             </div>
         </div>
