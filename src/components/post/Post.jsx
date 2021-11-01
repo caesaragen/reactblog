@@ -11,7 +11,7 @@ export default function Post() {
                     <span className="postCat">
                         Music
                     </span>
-                     <span className="postCat">
+                        <span className="postCat">
                         Life
                     </span>
                 </div>
