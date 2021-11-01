@@ -1,7 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "./topBar.css"
-import pic from '../Images/hunger.jpg'
+import pic from '../../Images/hunger.jpg'
 
 const TopBar = () => {
     return (

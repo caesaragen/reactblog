@@ -1,6 +1,6 @@
 import React from 'react'
 import "./header.css"
-import comp from "../Images/comp.jpg"
+import comp from "../../Images/comp.jpg"
 
 export default function Header() {
     return (
