@@ -1,8 +1,10 @@
 import React from 'react'
 import "./topBar.css"
 import pic from '../../Images/hunger.jpg'
+import { Link } from 'react-router-dom';
 
 const TopBar = () => {
+    const user = false;
     return (
         <div className="top">
             <div className="topLeft"><i className="topIcon fa-brands fa-facebook-f"></i>
@@ -12,15 +14,27 @@ const TopBar = () => {
             </div>
             <div className="topCenter">
                 <ul className="topList">
-                    <li className="topListItem">Home</li>
-                    <li className="topListItem">About</li>
-                    <li className="topListItem">Contact</li>
-                    <li className="topListItem">Write</li>
-                    <li className="topListItem">Logout</li>
+                    <li className="topListItem">
+                        <Link to="/" className="link">Home</Link>
+                    </li>
+                    <li className="topListItem">
+                        <Link to="" className="link">About</Link>
+                    </li>
+                    <li className="topListItem">
+                        <Link to=""className="link">Contact</Link>
+                    </li>
+                    <li className="topListItem">
+                        <Link to="/write"className="link">Write</Link>
+                    </li>
+                    <li className="topListItem">
+                        {user && "Logout"}
+                    </li>
                 </ul>
             </div>
             <div className="topRight">
-                <img src={pic} alt="" srcset="" className="topImg" />
+                {user ? (<img src={pic} alt="" srcset="" className="topImg" />) : (<ul className="topList"><li className="topListItem"><Link to="/login" className="link">Login</Link></li>
+               <li className="topListItem"> <Link to="/register" className="link">Register</Link></li></ul>)}
+                
                 <i className="topSearchIcon fas fa-search"></i>
             </div>
         </div>
