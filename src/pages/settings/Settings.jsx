@@ -17,6 +17,13 @@ export default function Settings() {
                         <label htmlFor="fileInput"><i className="settingsPPIcon far fa-user-circle"></i></label>
                         <input type="file" id="fileInput" style={{display:"none"}}/>
                     </div>
+                    <label>Username</label>
+                    <input type="text" placeholder="Joel" />
+                    <label>Email</label>
+                    <input type="email" placeholder="joel@gmail.com" />
+                    <label>Password</label>
+                    <input type="password" />
+                    <button className="settingsSubmit">Update</button>
                 </form>
             </div>
             <Sidebar/>
