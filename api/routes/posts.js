@@ -33,6 +33,23 @@ router.put("/:id", async (req, res) => {
   }
 });
 //DELETE
+router.delete("/:id", async (req, res) => {
+  try {
+    const post = await Post.findById(req.params.id);
+    if (post.username === req.body.username) {
+      try {
+        await post.delete()
+        res.status(200).json("Post deleted!");
+      } catch (err) {
+        res.status(300).json(err);
+      }
+    } else {
+      res.status(401).json("Insufficient Permissions!");
+    }
+  } catch (err) {
+    res.status(300).json(err);
+  }
+});
 //GET POST
 router.get("/:id", async (req, res) => {
   try {
