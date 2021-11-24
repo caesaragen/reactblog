@@ -21,6 +21,9 @@ const TopBar = () => {
                         <Link to="/" className="link">Home</Link>
                     </li>
                     <li className="topListItem nav-item">
+                        <Link to="" className="link">Blog</Link>
+                    </li>
+                    <li className="topListItem nav-item">
                         <Link to="" className="link">About</Link>
                     </li>
                     <li className="topListItem nav-item">
