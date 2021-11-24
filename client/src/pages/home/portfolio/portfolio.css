@@ -1,8 +1,9 @@
 .portfolio {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-image: linear-gradient(to right, rgb(94, 45, 134), rgb(101, 64, 102));
   height: 100vh;
 }
-.container{}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
