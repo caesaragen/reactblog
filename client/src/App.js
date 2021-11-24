@@ -11,6 +11,7 @@ import {
   Route,
   Link
 } from 'react-router-dom'
+import Portfolio from "./pages/home/portfolio/Portfolio";
 
 function App() {
   const user = false;
@@ -19,7 +20,8 @@ function App() {
       <TopBar />
       <Switch>
         <Route exact path="/">
-          <Home />
+          <Portfolio/>
+          {/* <Home /> */}
         </Route>
         <Route path="/register">{user ? <Home /> : <Register />}</Route>
         <Route path="/login">{user ? <Home /> : <Login />}</Route>
