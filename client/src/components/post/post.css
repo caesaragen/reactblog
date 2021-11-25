@@ -56,9 +56,9 @@
     /* max-width: 35ch; */
     overflow: hidden;
     border-radius: 0.5rem;
-    transition: transform 500ms ease;
+    transition: transform 100ms ease;
 }
-.card:hover{
+.card:hover, .card:focus-within{
     transform: scale(1.05);
 }
 .card-content{
@@ -68,7 +68,24 @@
         hsl(0 0% 0% / 0),
         hsl(0 0% 0% / 0.4) 10%,
         hsl(0 0% 0% / 1)
-    )
+    );
+    transform: translateY(65%);
+    transition: transform 1000ms ease;
+}
+.card:hover .card-content,
+.card:focus-within .card-content{
+    transform: translateY(0);
+    transition-delay: 500ms;
+
+}
+.card-content > *:not(.card-title, .postCats) {
+    opacity: 0;
+    transition: opacity 500ms linear;
+}
+.card:hover .card-content > *:not(.card-title, .postCats) {
+    opacity: 1;
+    transition-delay: 1000ms;
+
 }
 .card-title{
     font-family: "Josefin Sans", serif;
