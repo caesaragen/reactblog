@@ -1,5 +1,10 @@
 .portfolio {
-  background-image: linear-gradient(to right, rgb(94, 45, 134), rgb(101, 64, 102));
+  /* background-image: linear-gradient(to right, rgb(94, 45, 134), rgb(101, 64, 102)); */
+    background: linear-gradient(
+        hsl(0 0% 0% / 0.7),
+        hsl(0 0% 0% / 0.5) 40%,
+        hsl(0 0% 0% / 1)
+    );
   height: 100vh;
 }
 .container{

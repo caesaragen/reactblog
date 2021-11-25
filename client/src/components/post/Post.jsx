@@ -11,7 +11,7 @@ export default function Post() {
                     <span className="postCat">
                         Music
                     </span>
-                        <span className="postCat">
+                    <span className="postCat">
                         Life
                     </span>
                 </div>
@@ -20,7 +20,15 @@ export default function Post() {
                 <span className="postDate">1 hour ago</span>
             </div>
             <p className="postDesc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet explicabo delectus eaque, blanditiis corporis deleniti suscipit! Dignissimos enim consectetur expedita, nobis odio, pariatur at, corrupti possimus sit maxime quia vel!
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet explicabo delectus eaque, blanditiis corporis deleniti suscipit! Dignissimos enim consectetur expedita, nobis odio, pariatur at, corrupti possimus sit maxime quia vel!</p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet explicabo delectus eaque, blanditiis corporis deleniti suscipit! Dignissimos enim consectetur expedita, nobis odio, pariatur at, corrupti possimus sit maxime quia vel!</p>
+            <div className="card">
+                <div className="card-content">
+                    <h2 className="card-title">Something Awesome</h2>
+                    <p className="card-body">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet explicabo delectus eaque, blanditiis corporis deleniti suscipit! Dignissimos enim consectetur expedita, nobis odio, pariatur at, corrupti possimus sit maxime quia vel!
+                        Lorem ipsum dolor sit amet consectetur,</p>
+                    <a href="#" className="button">Read More</a>
+                </div>
+            </div>
         </div>
     )
 }
