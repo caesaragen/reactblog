@@ -34,6 +34,7 @@
     font-style: italic;
     color: #999;
     margin-top: 15px;
+    float: right;
 }
 .postDesc{
     font-family:"Varela Round", serif ;
@@ -48,15 +49,20 @@
     -webkit-box-orient: vertical;
 }
 .card{
-    font-family: "Josefin Sans", serif;
     background-image: url("../../Images/hunger.jpg");
     background-size: cover;
     padding: 10rem 0 0;
     color: #fff;
     /* max-width: 35ch; */
+    overflow: hidden;
+    border-radius: 0.5rem;
+    transition: transform 500ms ease;
+}
+.card:hover{
+    transform: scale(1.05);
 }
 .card-content{
-    --padding:1.5em;
+    --padding:1.5rem;
     padding:var(--padding);
     background: linear-gradient(
         hsl(0 0% 0% / 0),
@@ -65,6 +71,7 @@
     )
 }
 .card-title{
+    font-family: "Josefin Sans", serif;
     position: relative;
     width: max-content;
     max-width: 100%;
@@ -74,7 +81,32 @@
     position: absolute;
     height: 4px;
     background: #be9656;
-    width: 100%;
-    left: 0;
+    width: calc(100% + var(--padding));
+    left: calc(var(--padding) * -1);
     bottom: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 500ms ease;
+    
+}
+.card:hover .card-title::after{
+    transform: scaleX(1);
+}
+.card-body{
+    color: rgb(255 255 255 / 0.5);
+    font-family:"Varela Round", serif ;
+}
+.button{
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 0.25em;
+    background-color: #be9656;
+    padding: 0.5em 1em;
+    color:#fff;
+}
+.button:hover, .button:focus{
+    background-color: #e6d8c1;
+    color:#44361f;
+
 }
