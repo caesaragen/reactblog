@@ -36,13 +36,14 @@ const TopBar = () => {
                         {user && "Logout"}
                     </li>
                 </ul>
-            </div>
-            <div className="topRight collapse navbar-collapse">
+                   <div className="topRight">
                 {user ? (<img src={pic} alt="" srcset="" className="topImg" />) : (<ul className="topList"><li className="topListItem"><Link to="/login" className="link">Login</Link></li>
                     <li className="topListItem nav-item"> <Link to="/register" className="link">Register</Link></li></ul>)}
 
                 <i className="topSearchIcon fas fa-search"></i>
             </div>
+            </div>
+         
         </nav>
     )
 }
