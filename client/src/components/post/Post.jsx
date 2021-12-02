@@ -2,7 +2,8 @@ import React from 'react'
 import "./post.css"
 import hunger from "../../Images/hunger.jpg"
 
-export default function Post() {
+export default function Post({ post }) {
+    console.log(post + "hapa")
     return (
         <div className="post">
             {/* <img src={hunger} alt="" srcset="" className="postImg" />
@@ -23,7 +24,7 @@ export default function Post() {
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet explicabo delectus eaque, blanditiis corporis deleniti suscipit! Dignissimos enim consectetur expedita, nobis odio, pariatur at, corrupti possimus sit maxime quia vel!</p> */}
             <div className="card">
                 <div className="card-content">
-                    <h2 className="card-title">Something Awesome</h2>
+                    <h2 className="card-title">{post.title}</h2>
                        <div className="postCats">
                     <span className="postCat">
                         Music
@@ -32,8 +33,7 @@ export default function Post() {
                         Life
                     </span>
                 </div>
-                    <p className="card-body">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet explicabo delectus eaque, blanditiis corporis deleniti suscipit! Dignissimos enim consectetur expedita, nobis odio, pariatur at, corrupti possimus sit maxime quia vel!
-                        Lorem ipsum dolor sit amet consectetur,</p>
+                    <p className="card-body">{post.desc}</p>
                     <a href="#" className="button">Read More</a>
                     <span className="postDate">1 hour ago</span>
                 </div>
